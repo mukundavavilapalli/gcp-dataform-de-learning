@@ -1,0 +1,8 @@
+js {
+    const {quoteList} = require("includes/helpers");
+    const targetStatus = ["PENDING","COMPLETED","CANCELED"]
+}
+SELECT
+*
+FROM ${ref("stg_orders")}
+where status not in (${quoteList(targetStatus)})

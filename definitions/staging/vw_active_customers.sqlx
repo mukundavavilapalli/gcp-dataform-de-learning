@@ -1,0 +1,13 @@
+config {
+    type : "view",
+    schema : "staging",
+    name : "vw_active_costomers"
+}
+SELECT 
+  customer_id,
+  customer_name,
+  email,
+  city,
+  updated_at
+FROM ${ref("stg_customers")}
+where status = 'ACTIVE'

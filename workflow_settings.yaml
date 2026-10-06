@@ -1,0 +1,4 @@
+defaultProject: de-learning-project-509604
+defaultDataset: dataform
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.52

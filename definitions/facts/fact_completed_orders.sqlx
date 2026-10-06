@@ -1,0 +1,11 @@
+js {
+    const targetStatus = "COMPLETED"
+}
+config {
+    type : "table",
+    schema : "analytics"
+}
+SELECT
+*
+from ${ref("stg_orders")}
+where status = '${targetStatus}'

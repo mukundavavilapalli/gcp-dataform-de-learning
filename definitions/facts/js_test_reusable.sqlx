@@ -1,0 +1,7 @@
+js {
+    const {standarizeCustomerColumns} = require("includes/helpers")
+}
+SELECT
+    c.customer_id,
+    ${standarizeCustomerColumns('c')}
+from ${ref("stg_customers")} as c

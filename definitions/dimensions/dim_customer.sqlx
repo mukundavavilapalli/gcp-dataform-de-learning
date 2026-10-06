@@ -1,0 +1,14 @@
+config {
+  type: "table",
+  schema: "analytics",
+  name: "dim_customer"
+}
+
+SELECT
+  customer_id,
+  customer_name,
+  email,
+  city,
+  status,
+  updated_at
+FROM ${ref("stg_customers")}

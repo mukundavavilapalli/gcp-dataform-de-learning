@@ -1,0 +1,13 @@
+config {
+    type: "assertion",
+    schema: "assertion"
+}
+
+SELECT
+  *
+FROM
+  ${ref("fact_orders")}
+WHERE
+  order_id IS NULL
+  OR customer_id IS NULL
+  OR order_date IS NULL

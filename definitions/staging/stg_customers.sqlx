@@ -1,0 +1,14 @@
+config {
+    type :"table",
+    schema : "staging",
+    name : "stg_customers"
+}
+
+SELECT 
+  customer_id,
+  customer_name,
+  LOWER(email) AS email,
+  city,
+  status,
+  updated_at
+FROM ${ref("customers_raw")}

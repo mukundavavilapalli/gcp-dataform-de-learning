@@ -1,0 +1,16 @@
+config {
+    type : "table",
+    schema : "staging",
+    name : "int_customer_orders"
+}
+SELECT
+  o.order_id,
+  o.customer_id,
+  c.customer_name,
+  c.city,
+  o.amount,
+  o.status,
+  o.order_date
+FROM ${ref("stg_orders")} o
+JOIN ${ref("stg_customers")} c
+  ON o.customer_id = c.customer_id

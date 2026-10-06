@@ -1,0 +1,14 @@
+config {
+    type: "assertion",
+    schema: "assertion"
+}
+
+SELECT
+  order_id,
+  COUNT(*) AS records_count
+FROM
+  ${ref("fact_orders")}
+GROUP BY
+  order_id
+HAVING
+  COUNT(*) > 1

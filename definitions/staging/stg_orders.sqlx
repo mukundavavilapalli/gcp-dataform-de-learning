@@ -1,0 +1,13 @@
+config {
+    type : "table",
+    schema : "staging",
+    name : "stg_orders"
+}
+SELECT
+  order_id,
+  customer_id,
+  amount,
+  status,
+  DATE(order_date) AS order_date,
+  updated_at
+FROM ${ref("orders_raw")}
