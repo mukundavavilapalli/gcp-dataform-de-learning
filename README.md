@@ -1,6 +1,6 @@
 # Dataform DE Learning
 
-Production-style Data Engineering practice project .
+Production-style Data Engineering practice project.
 
 Technologies:
 - BigQuery
