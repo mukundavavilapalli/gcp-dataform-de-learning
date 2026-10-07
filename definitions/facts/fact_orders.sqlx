@@ -4,6 +4,7 @@ config {
   name: "fact_orders"
 }
 
+--Git practice: production fact orders model
 SELECT
   order_id,
   customer_id,
