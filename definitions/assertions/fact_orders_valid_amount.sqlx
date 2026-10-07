@@ -1,0 +1,10 @@
+config {
+  type: "assertion",
+  schema: "assertions"
+}
+
+SELECT
+  order_id,
+  amount
+FROM ${ref("fact_orders")}
+WHERE amount < 0
