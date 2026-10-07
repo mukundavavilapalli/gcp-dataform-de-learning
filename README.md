@@ -7,4 +7,4 @@ Technologies:
 - Dataform
 - SQL
 - JavaScript
-- Git
+- Git 
